@@ -16,7 +16,7 @@
       "results": {
         "pcos": {
           "name": "PCOS (Polycystic Ovary Syndrome)",
-          "risk_score": 0.0,
+          "risk_score": 12.09,
           "risk_level": "Low",
           "explanation": "PCOS is a hormonal imbalance where small cysts form in the ovaries. It causes irregular periods and raises male hormones (androgens) — leading to excess hair growth, acne, and weight gain.",
           "urgency": "See a doctor soon",
@@ -27,12 +27,19 @@
             "Weight management",
             "Stress reduction"
           ],
-          "matched_symptoms": []
+          "matched_symptoms": [
+            "irregular periods",
+            "excess facial hair",
+            "excess body hair",
+            "dark skin patches",
+            "weight gain",
+            "mood swings"
+          ]
         },
         "menstrual_irregularities": {
           "name": "Menstrual Irregularities",
-          "risk_score": 0.0,
-          "risk_level": "Low",
+          "risk_score": 83.33,
+          "risk_level": "High",
           "explanation": "Irregular periods can have many causes — hormonal imbalance, stress, thyroid issues, PCOS, or weight changes. Tracking your cycle pattern is important for diagnosis.",
           "urgency": "Monitor at home",
           "urgency_desc": "Monitor at home if occasional, see a doctor soon if persistent (3+ cycles). Seek urgent care if soaking through pad/tampon every hour for 2+ hours.",
@@ -41,11 +48,17 @@
             "Note stress/diet changes",
             "Maintain healthy weight"
           ],
-          "matched_symptoms": []
+          "matched_symptoms": [
+            "periods lasting 7+ days",
+            "cycle shorter than 21 days",
+            "periods missed for 2+ months",
+            "bleeding between periods",
+            "extremely heavy bleeding"
+          ]
         },
         "anemia": {
           "name": "Anemia (Iron Deficiency)",
-          "risk_score": 9.09,
+          "risk_score": 18.18,
           "risk_level": "Low",
           "explanation": "Anemia happens when red blood cells or hemoglobin in the blood drop, so the body doesn't get enough oxygen. It's common in women due to heavy periods or an iron-poor diet.",
           "urgency": "See a doctor soon",
@@ -56,13 +69,14 @@
             "Avoid tea/coffee with meals"
           ],
           "matched_symptoms": [
-            "brittle nails"
+            "hair fall",
+            "weakness"
           ]
         },
         "thyroid": {
           "name": "Thyroid Disorders (Hypo/Hyperthyroidism)",
-          "risk_score": 0.0,
-          "risk_level": "Low",
+          "risk_score": 46.15,
+          "risk_level": "Medium",
           "explanation": "The thyroid gland controls the body's metabolism. In hypothyroidism it becomes underactive (everything slows down), and in hyperthyroidism it becomes overactive (everything speeds up). Both are identified by symptoms and confirmed with blood tests.",
           "urgency": "See a doctor soon",
           "urgency_desc": "See a doctor soon for most cases. Seek urgent care for rapid heartbeat with chest pain, or severe weakness.",
@@ -71,12 +85,19 @@
             "Iodine-balanced diet",
             "Medication adherence if diagnosed"
           ],
-          "matched_symptoms": []
+          "matched_symptoms": [
+            "weight gain",
+            "weight loss",
+            "cold intolerance",
+            "anxiety",
+            "tremors",
+            "excessive sweating"
+          ]
         },
         "endometriosis": {
           "name": "Endometriosis",
-          "risk_score": 0.0,
-          "risk_level": "Low",
+          "risk_score": 50.0,
+          "risk_level": "High",
           "explanation": "In endometriosis, tissue similar to the uterine lining grows outside the uterus (ovaries, fallopian tubes). This causes severe pain, especially during periods, and can affect fertility if untreated.",
           "urgency": "See a doctor soon",
           "urgency_desc": "See a doctor soon for consistent pain pattern. Seek urgent care for sudden severe abdominal pain or fainting.",
@@ -85,11 +106,15 @@
             "Heat therapy",
             "Anti-inflammatory diet"
           ],
-          "matched_symptoms": []
+          "matched_symptoms": [
+            "severe pelvic pain",
+            "pain during periods",
+            "lower back pain"
+          ]
         },
         "menopause": {
           "name": "Menopause / Perimenopause",
-          "risk_score": 0.0,
+          "risk_score": 5.0,
           "risk_level": "Low",
           "explanation": "Menopause is a natural phase when the ovaries stop producing periods, usually between ages 45-55. Perimenopause is the transition phase before it.",
           "urgency": "Monitor at home",
@@ -100,12 +125,16 @@
             "Calcium and Vitamin D rich diet",
             "Mindfulness or stress reduction"
           ],
-          "matched_symptoms": []
+          "matched_symptoms": [
+            "irregular periods (age 40+)",
+            "hot flashes",
+            "night sweats"
+          ]
         },
         "uti": {
           "name": "UTI / Vaginal Infections",
-          "risk_score": 0.0,
-          "risk_level": "Low",
+          "risk_score": 40.0,
+          "risk_level": "Medium",
           "explanation": "These infections are common and usually treatable with antibiotics or antifungals — early treatment avoids complications.",
           "urgency": "See a doctor soon",
           "urgency_desc": "See a doctor soon (within 1-2 days, especially if fever is present).",
@@ -114,13 +143,16 @@
             "Maintain hygiene",
             "Avoid fragrant soaps"
           ],
-          "matched_symptoms": []
+          "matched_symptoms": [
+            "pelvic pain",
+            "burning during urination"
+          ]
         }
       },
-      "health_score": 99,
-      "risk_label": "Excellent",
-      "top_risk_name": "Anemia (Iron Deficiency)",
-      "timestamp": 1782896582059
+      "health_score": 64,
+      "risk_label": "Good",
+      "top_risk_name": "Menstrual Irregularities",
+      "timestamp": 1783079811245
     }
   }
 }
