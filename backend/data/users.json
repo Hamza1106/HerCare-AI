@@ -1,0 +1,642 @@
+{
+  "demo@hercare.ai": {
+    "name": "Demo User",
+    "email": "demo@hercare.ai",
+    "password": "demo123",
+    "created_at": 1782820101230,
+    "assessments": [
+      {
+        "bmi": 24.22,
+        "results": {
+          "pcos": {
+            "name": "PCOS (Polycystic Ovary Syndrome)",
+            "risk_score": 1.0,
+            "risk_level": "Low",
+            "explanation": "PCOS is a hormonal imbalance where small cysts form in the ovaries. It causes irregular periods and raises male hormones (androgens) — leading to excess hair growth, acne, and weight gain.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "Especially if trying to conceive or periods missing 3+ months",
+            "lifestyle_tips": [
+              "Low-glycemic diet",
+              "Regular exercise",
+              "Weight management",
+              "Stress reduction"
+            ],
+            "matched_symptoms": [
+              "dark skin patches"
+            ]
+          },
+          "menstrual_irregularities": {
+            "name": "Menstrual Irregularities",
+            "risk_score": 16.67,
+            "risk_level": "Low",
+            "explanation": "Irregular periods can have many causes — hormonal imbalance, stress, thyroid issues, PCOS, or weight changes. Tracking your cycle pattern is important for diagnosis.",
+            "urgency": "Monitor at home",
+            "urgency_desc": "Monitor at home if occasional, see a doctor soon if persistent (3+ cycles). Seek urgent care if soaking through pad/tampon every hour for 2+ hours.",
+            "lifestyle_tips": [
+              "Track cycle with an app",
+              "Note stress/diet changes",
+              "Maintain healthy weight"
+            ],
+            "matched_symptoms": [
+              "extremely heavy bleeding"
+            ]
+          },
+          "anemia": {
+            "name": "Anemia (Iron Deficiency)",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "Anemia happens when red blood cells or hemoglobin in the blood drop, so the body doesn't get enough oxygen. It's common in women due to heavy periods or an iron-poor diet.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "Monitor at home for mild fatigue, see a doctor soon for persistent symptoms, seek urgent care for severe dizziness, fainting, or chest pain.",
+            "lifestyle_tips": [
+              "Iron-rich foods (spinach, red meat, lentils)",
+              "Vitamin C with iron for better absorption",
+              "Avoid tea/coffee with meals"
+            ],
+            "matched_symptoms": []
+          },
+          "thyroid": {
+            "name": "Thyroid Disorders (Hypo/Hyperthyroidism)",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "The thyroid gland controls the body's metabolism. In hypothyroidism it becomes underactive (everything slows down), and in hyperthyroidism it becomes overactive (everything speeds up). Both are identified by symptoms and confirmed with blood tests.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "See a doctor soon for most cases. Seek urgent care for rapid heartbeat with chest pain, or severe weakness.",
+            "lifestyle_tips": [
+              "Regular TSH testing",
+              "Iodine-balanced diet",
+              "Medication adherence if diagnosed"
+            ],
+            "matched_symptoms": []
+          },
+          "endometriosis": {
+            "name": "Endometriosis",
+            "risk_score": 50.0,
+            "risk_level": "High",
+            "explanation": "In endometriosis, tissue similar to the uterine lining grows outside the uterus (ovaries, fallopian tubes). This causes severe pain, especially during periods, and can affect fertility if untreated.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "See a doctor soon for consistent pain pattern. Seek urgent care for sudden severe abdominal pain or fainting.",
+            "lifestyle_tips": [
+              "Pain tracking journal",
+              "Heat therapy",
+              "Anti-inflammatory diet"
+            ],
+            "matched_symptoms": [
+              "pain during periods"
+            ]
+          },
+          "menopause": {
+            "name": "Menopause / Perimenopause",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "Menopause is a natural phase when the ovaries stop producing periods, usually between ages 45-55. Perimenopause is the transition phase before it.",
+            "urgency": "Monitor at home",
+            "urgency_desc": "Generally natural, but talk to a doctor if symptoms severely impact daily life.",
+            "lifestyle_tips": [
+              "Stay cool and layered",
+              "Regular weight-bearing exercise",
+              "Calcium and Vitamin D rich diet",
+              "Mindfulness or stress reduction"
+            ],
+            "matched_symptoms": []
+          },
+          "uti": {
+            "name": "UTI / Vaginal Infections",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "These infections are common and usually treatable with antibiotics or antifungals — early treatment avoids complications.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "See a doctor soon (within 1-2 days, especially if fever is present).",
+            "lifestyle_tips": [
+              "Drink plenty of water",
+              "Maintain hygiene",
+              "Avoid fragrant soaps"
+            ],
+            "matched_symptoms": []
+          }
+        },
+        "health_score": 90,
+        "risk_label": "Excellent",
+        "top_risk_name": "Endometriosis",
+        "timestamp": 1783170442200
+      }
+    ]
+  },
+  "hamza.akhtar0111@gmail.com": {
+    "name": "Hamza",
+    "email": "hamza.akhtar0111@gmail.com",
+    "password": "Hamza#1106",
+    "created_at": 1782820146736,
+    "last_assessment": {
+      "bmi": 24.22,
+      "results": {
+        "pcos": {
+          "name": "PCOS (Polycystic Ovary Syndrome)",
+          "risk_score": 12.09,
+          "risk_level": "Low",
+          "explanation": "PCOS is a hormonal imbalance where small cysts form in the ovaries. It causes irregular periods and raises male hormones (androgens) — leading to excess hair growth, acne, and weight gain.",
+          "urgency": "See a doctor soon",
+          "urgency_desc": "Especially if trying to conceive or periods missing 3+ months",
+          "lifestyle_tips": [
+            "Low-glycemic diet",
+            "Regular exercise",
+            "Weight management",
+            "Stress reduction"
+          ],
+          "matched_symptoms": [
+            "irregular periods",
+            "excess facial hair",
+            "excess body hair",
+            "dark skin patches",
+            "weight gain",
+            "mood swings"
+          ]
+        },
+        "menstrual_irregularities": {
+          "name": "Menstrual Irregularities",
+          "risk_score": 83.33,
+          "risk_level": "High",
+          "explanation": "Irregular periods can have many causes — hormonal imbalance, stress, thyroid issues, PCOS, or weight changes. Tracking your cycle pattern is important for diagnosis.",
+          "urgency": "Monitor at home",
+          "urgency_desc": "Monitor at home if occasional, see a doctor soon if persistent (3+ cycles). Seek urgent care if soaking through pad/tampon every hour for 2+ hours.",
+          "lifestyle_tips": [
+            "Track cycle with an app",
+            "Note stress/diet changes",
+            "Maintain healthy weight"
+          ],
+          "matched_symptoms": [
+            "periods lasting 7+ days",
+            "cycle shorter than 21 days",
+            "periods missed for 2+ months",
+            "bleeding between periods",
+            "extremely heavy bleeding"
+          ]
+        },
+        "anemia": {
+          "name": "Anemia (Iron Deficiency)",
+          "risk_score": 18.18,
+          "risk_level": "Low",
+          "explanation": "Anemia happens when red blood cells or hemoglobin in the blood drop, so the body doesn't get enough oxygen. It's common in women due to heavy periods or an iron-poor diet.",
+          "urgency": "See a doctor soon",
+          "urgency_desc": "Monitor at home for mild fatigue, see a doctor soon for persistent symptoms, seek urgent care for severe dizziness, fainting, or chest pain.",
+          "lifestyle_tips": [
+            "Iron-rich foods (spinach, red meat, lentils)",
+            "Vitamin C with iron for better absorption",
+            "Avoid tea/coffee with meals"
+          ],
+          "matched_symptoms": [
+            "hair fall",
+            "weakness"
+          ]
+        },
+        "thyroid": {
+          "name": "Thyroid Disorders (Hypo/Hyperthyroidism)",
+          "risk_score": 46.15,
+          "risk_level": "Medium",
+          "explanation": "The thyroid gland controls the body's metabolism. In hypothyroidism it becomes underactive (everything slows down), and in hyperthyroidism it becomes overactive (everything speeds up). Both are identified by symptoms and confirmed with blood tests.",
+          "urgency": "See a doctor soon",
+          "urgency_desc": "See a doctor soon for most cases. Seek urgent care for rapid heartbeat with chest pain, or severe weakness.",
+          "lifestyle_tips": [
+            "Regular TSH testing",
+            "Iodine-balanced diet",
+            "Medication adherence if diagnosed"
+          ],
+          "matched_symptoms": [
+            "weight gain",
+            "weight loss",
+            "cold intolerance",
+            "anxiety",
+            "tremors",
+            "excessive sweating"
+          ]
+        },
+        "endometriosis": {
+          "name": "Endometriosis",
+          "risk_score": 50.0,
+          "risk_level": "High",
+          "explanation": "In endometriosis, tissue similar to the uterine lining grows outside the uterus (ovaries, fallopian tubes). This causes severe pain, especially during periods, and can affect fertility if untreated.",
+          "urgency": "See a doctor soon",
+          "urgency_desc": "See a doctor soon for consistent pain pattern. Seek urgent care for sudden severe abdominal pain or fainting.",
+          "lifestyle_tips": [
+            "Pain tracking journal",
+            "Heat therapy",
+            "Anti-inflammatory diet"
+          ],
+          "matched_symptoms": [
+            "severe pelvic pain",
+            "pain during periods",
+            "lower back pain"
+          ]
+        },
+        "menopause": {
+          "name": "Menopause / Perimenopause",
+          "risk_score": 5.0,
+          "risk_level": "Low",
+          "explanation": "Menopause is a natural phase when the ovaries stop producing periods, usually between ages 45-55. Perimenopause is the transition phase before it.",
+          "urgency": "Monitor at home",
+          "urgency_desc": "Generally natural, but talk to a doctor if symptoms severely impact daily life.",
+          "lifestyle_tips": [
+            "Stay cool and layered",
+            "Regular weight-bearing exercise",
+            "Calcium and Vitamin D rich diet",
+            "Mindfulness or stress reduction"
+          ],
+          "matched_symptoms": [
+            "irregular periods (age 40+)",
+            "hot flashes",
+            "night sweats"
+          ]
+        },
+        "uti": {
+          "name": "UTI / Vaginal Infections",
+          "risk_score": 40.0,
+          "risk_level": "Medium",
+          "explanation": "These infections are common and usually treatable with antibiotics or antifungals — early treatment avoids complications.",
+          "urgency": "See a doctor soon",
+          "urgency_desc": "See a doctor soon (within 1-2 days, especially if fever is present).",
+          "lifestyle_tips": [
+            "Drink plenty of water",
+            "Maintain hygiene",
+            "Avoid fragrant soaps"
+          ],
+          "matched_symptoms": [
+            "pelvic pain",
+            "burning during urination"
+          ]
+        }
+      },
+      "health_score": 64,
+      "risk_label": "Good",
+      "top_risk_name": "Menstrual Irregularities",
+      "timestamp": 1783079811245
+    }
+  },
+  "ridaayaz1810@gmail.com": {
+    "name": "Rida Ayaz",
+    "email": "ridaayaz1810@gmail.com",
+    "password": "rida123",
+    "created_at": 1783101918779,
+    "assessments": [
+      {
+        "bmi": 17.04,
+        "results": {
+          "pcos": {
+            "name": "PCOS (Polycystic Ovary Syndrome)",
+            "risk_score": 1.0,
+            "risk_level": "Low",
+            "explanation": "PCOS is a hormonal imbalance where small cysts form in the ovaries. It causes irregular periods and raises male hormones (androgens) — leading to excess hair growth, acne, and weight gain.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "Especially if trying to conceive or periods missing 3+ months",
+            "lifestyle_tips": [
+              "Low-glycemic diet",
+              "Regular exercise",
+              "Weight management",
+              "Stress reduction"
+            ],
+            "matched_symptoms": [
+              "acne"
+            ]
+          },
+          "menstrual_irregularities": {
+            "name": "Menstrual Irregularities",
+            "risk_score": 33.33,
+            "risk_level": "Medium",
+            "explanation": "Irregular periods can have many causes — hormonal imbalance, stress, thyroid issues, PCOS, or weight changes. Tracking your cycle pattern is important for diagnosis.",
+            "urgency": "Monitor at home",
+            "urgency_desc": "Monitor at home if occasional, see a doctor soon if persistent (3+ cycles). Seek urgent care if soaking through pad/tampon every hour for 2+ hours.",
+            "lifestyle_tips": [
+              "Track cycle with an app",
+              "Note stress/diet changes",
+              "Maintain healthy weight"
+            ],
+            "matched_symptoms": [
+              "bleeding between periods",
+              "periods lasting 7+ days"
+            ]
+          },
+          "anemia": {
+            "name": "Anemia (Iron Deficiency)",
+            "risk_score": 36.36,
+            "risk_level": "Medium",
+            "explanation": "Anemia happens when red blood cells or hemoglobin in the blood drop, so the body doesn't get enough oxygen. It's common in women due to heavy periods or an iron-poor diet.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "Monitor at home for mild fatigue, see a doctor soon for persistent symptoms, seek urgent care for severe dizziness, fainting, or chest pain.",
+            "lifestyle_tips": [
+              "Iron-rich foods (spinach, red meat, lentils)",
+              "Vitamin C with iron for better absorption",
+              "Avoid tea/coffee with meals"
+            ],
+            "matched_symptoms": [
+              "hair fall",
+              "brittle nails",
+              "constant fatigue",
+              "weakness"
+            ]
+          },
+          "thyroid": {
+            "name": "Thyroid Disorders (Hypo/Hyperthyroidism)",
+            "risk_score": 23.08,
+            "risk_level": "Medium",
+            "explanation": "The thyroid gland controls the body's metabolism. In hypothyroidism it becomes underactive (everything slows down), and in hyperthyroidism it becomes overactive (everything speeds up). Both are identified by symptoms and confirmed with blood tests.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "See a doctor soon for most cases. Seek urgent care for rapid heartbeat with chest pain, or severe weakness.",
+            "lifestyle_tips": [
+              "Regular TSH testing",
+              "Iodine-balanced diet",
+              "Medication adherence if diagnosed"
+            ],
+            "matched_symptoms": [
+              "fatigue",
+              "anxiety",
+              "rapid heartbeat"
+            ]
+          },
+          "endometriosis": {
+            "name": "Endometriosis",
+            "risk_score": 50.0,
+            "risk_level": "High",
+            "explanation": "In endometriosis, tissue similar to the uterine lining grows outside the uterus (ovaries, fallopian tubes). This causes severe pain, especially during periods, and can affect fertility if untreated.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "See a doctor soon for consistent pain pattern. Seek urgent care for sudden severe abdominal pain or fainting.",
+            "lifestyle_tips": [
+              "Pain tracking journal",
+              "Heat therapy",
+              "Anti-inflammatory diet"
+            ],
+            "matched_symptoms": [
+              "fatigue",
+              "pain during periods",
+              "lower back pain"
+            ]
+          },
+          "menopause": {
+            "name": "Menopause / Perimenopause",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "Menopause is a natural phase when the ovaries stop producing periods, usually between ages 45-55. Perimenopause is the transition phase before it.",
+            "urgency": "Monitor at home",
+            "urgency_desc": "Generally natural, but talk to a doctor if symptoms severely impact daily life.",
+            "lifestyle_tips": [
+              "Stay cool and layered",
+              "Regular weight-bearing exercise",
+              "Calcium and Vitamin D rich diet",
+              "Mindfulness or stress reduction"
+            ],
+            "matched_symptoms": []
+          },
+          "uti": {
+            "name": "UTI / Vaginal Infections",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "These infections are common and usually treatable with antibiotics or antifungals — early treatment avoids complications.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "See a doctor soon (within 1-2 days, especially if fever is present).",
+            "lifestyle_tips": [
+              "Drink plenty of water",
+              "Maintain hygiene",
+              "Avoid fragrant soaps"
+            ],
+            "matched_symptoms": []
+          }
+        },
+        "health_score": 79,
+        "risk_label": "Good",
+        "top_risk_name": "Endometriosis",
+        "timestamp": 1783161014626
+      },
+      {
+        "bmi": 24.22,
+        "results": {
+          "pcos": {
+            "name": "PCOS (Polycystic Ovary Syndrome)",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "PCOS is a hormonal imbalance where small cysts form in the ovaries. It causes irregular periods and raises male hormones (androgens) — leading to excess hair growth, acne, and weight gain.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "Especially if trying to conceive or periods missing 3+ months",
+            "lifestyle_tips": [
+              "Low-glycemic diet",
+              "Regular exercise",
+              "Weight management",
+              "Stress reduction"
+            ],
+            "matched_symptoms": []
+          },
+          "menstrual_irregularities": {
+            "name": "Menstrual Irregularities",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "Irregular periods can have many causes — hormonal imbalance, stress, thyroid issues, PCOS, or weight changes. Tracking your cycle pattern is important for diagnosis.",
+            "urgency": "Monitor at home",
+            "urgency_desc": "Monitor at home if occasional, see a doctor soon if persistent (3+ cycles). Seek urgent care if soaking through pad/tampon every hour for 2+ hours.",
+            "lifestyle_tips": [
+              "Track cycle with an app",
+              "Note stress/diet changes",
+              "Maintain healthy weight"
+            ],
+            "matched_symptoms": []
+          },
+          "anemia": {
+            "name": "Anemia (Iron Deficiency)",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "Anemia happens when red blood cells or hemoglobin in the blood drop, so the body doesn't get enough oxygen. It's common in women due to heavy periods or an iron-poor diet.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "Monitor at home for mild fatigue, see a doctor soon for persistent symptoms, seek urgent care for severe dizziness, fainting, or chest pain.",
+            "lifestyle_tips": [
+              "Iron-rich foods (spinach, red meat, lentils)",
+              "Vitamin C with iron for better absorption",
+              "Avoid tea/coffee with meals"
+            ],
+            "matched_symptoms": []
+          },
+          "thyroid": {
+            "name": "Thyroid Disorders (Hypo/Hyperthyroidism)",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "The thyroid gland controls the body's metabolism. In hypothyroidism it becomes underactive (everything slows down), and in hyperthyroidism it becomes overactive (everything speeds up). Both are identified by symptoms and confirmed with blood tests.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "See a doctor soon for most cases. Seek urgent care for rapid heartbeat with chest pain, or severe weakness.",
+            "lifestyle_tips": [
+              "Regular TSH testing",
+              "Iodine-balanced diet",
+              "Medication adherence if diagnosed"
+            ],
+            "matched_symptoms": []
+          },
+          "endometriosis": {
+            "name": "Endometriosis",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "In endometriosis, tissue similar to the uterine lining grows outside the uterus (ovaries, fallopian tubes). This causes severe pain, especially during periods, and can affect fertility if untreated.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "See a doctor soon for consistent pain pattern. Seek urgent care for sudden severe abdominal pain or fainting.",
+            "lifestyle_tips": [
+              "Pain tracking journal",
+              "Heat therapy",
+              "Anti-inflammatory diet"
+            ],
+            "matched_symptoms": []
+          },
+          "menopause": {
+            "name": "Menopause / Perimenopause",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "Menopause is a natural phase when the ovaries stop producing periods, usually between ages 45-55. Perimenopause is the transition phase before it.",
+            "urgency": "Monitor at home",
+            "urgency_desc": "Generally natural, but talk to a doctor if symptoms severely impact daily life.",
+            "lifestyle_tips": [
+              "Stay cool and layered",
+              "Regular weight-bearing exercise",
+              "Calcium and Vitamin D rich diet",
+              "Mindfulness or stress reduction"
+            ],
+            "matched_symptoms": []
+          },
+          "uti": {
+            "name": "UTI / Vaginal Infections",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "These infections are common and usually treatable with antibiotics or antifungals — early treatment avoids complications.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "See a doctor soon (within 1-2 days, especially if fever is present).",
+            "lifestyle_tips": [
+              "Drink plenty of water",
+              "Maintain hygiene",
+              "Avoid fragrant soaps"
+            ],
+            "matched_symptoms": []
+          }
+        },
+        "health_score": 100,
+        "risk_label": "Excellent",
+        "top_risk_name": "PCOS (Polycystic Ovary Syndrome)",
+        "timestamp": 1783161762789
+      }
+    ]
+  },
+  "radhikakapoor@gmail.com": {
+    "name": "Radhika",
+    "email": "radhikakapoor@gmail.com",
+    "password": "Radhika",
+    "created_at": 1783255699000,
+    "assessments": []
+  },
+  "hamzaqureshi0128@gmail.com": {
+    "name": "Hamza Akhtar",
+    "email": "hamzaqureshi0128@gmail.com",
+    "password": "Hamza#1106",
+    "created_at": 1783270916185,
+    "assessments": [
+      {
+        "bmi": 24.22,
+        "results": {
+          "pcos": {
+            "name": "PCOS (Polycystic Ovary Syndrome)",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "PCOS is a hormonal imbalance where small cysts form in the ovaries. It causes irregular periods and raises male hormones (androgens) — leading to excess hair growth, acne, and weight gain.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "Especially if trying to conceive or periods missing 3+ months",
+            "lifestyle_tips": [
+              "Low-glycemic diet",
+              "Regular exercise",
+              "Weight management",
+              "Stress reduction"
+            ],
+            "matched_symptoms": []
+          },
+          "menstrual_irregularities": {
+            "name": "Menstrual Irregularities",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "Irregular periods can have many causes — hormonal imbalance, stress, thyroid issues, PCOS, or weight changes. Tracking your cycle pattern is important for diagnosis.",
+            "urgency": "Monitor at home",
+            "urgency_desc": "Monitor at home if occasional, see a doctor soon if persistent (3+ cycles). Seek urgent care if soaking through pad/tampon every hour for 2+ hours.",
+            "lifestyle_tips": [
+              "Track cycle with an app",
+              "Note stress/diet changes",
+              "Maintain healthy weight"
+            ],
+            "matched_symptoms": []
+          },
+          "anemia": {
+            "name": "Anemia (Iron Deficiency)",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "Anemia happens when red blood cells or hemoglobin in the blood drop, so the body doesn't get enough oxygen. It's common in women due to heavy periods or an iron-poor diet.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "Monitor at home for mild fatigue, see a doctor soon for persistent symptoms, seek urgent care for severe dizziness, fainting, or chest pain.",
+            "lifestyle_tips": [
+              "Iron-rich foods (spinach, red meat, lentils)",
+              "Vitamin C with iron for better absorption",
+              "Avoid tea/coffee with meals"
+            ],
+            "matched_symptoms": []
+          },
+          "thyroid": {
+            "name": "Thyroid Disorders (Hypo/Hyperthyroidism)",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "The thyroid gland controls the body's metabolism. In hypothyroidism it becomes underactive (everything slows down), and in hyperthyroidism it becomes overactive (everything speeds up). Both are identified by symptoms and confirmed with blood tests.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "See a doctor soon for most cases. Seek urgent care for rapid heartbeat with chest pain, or severe weakness.",
+            "lifestyle_tips": [
+              "Regular TSH testing",
+              "Iodine-balanced diet",
+              "Medication adherence if diagnosed"
+            ],
+            "matched_symptoms": []
+          },
+          "endometriosis": {
+            "name": "Endometriosis",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "In endometriosis, tissue similar to the uterine lining grows outside the uterus (ovaries, fallopian tubes). This causes severe pain, especially during periods, and can affect fertility if untreated.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "See a doctor soon for consistent pain pattern. Seek urgent care for sudden severe abdominal pain or fainting.",
+            "lifestyle_tips": [
+              "Pain tracking journal",
+              "Heat therapy",
+              "Anti-inflammatory diet"
+            ],
+            "matched_symptoms": []
+          },
+          "menopause": {
+            "name": "Menopause / Perimenopause",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "Menopause is a natural phase when the ovaries stop producing periods, usually between ages 45-55. Perimenopause is the transition phase before it.",
+            "urgency": "Monitor at home",
+            "urgency_desc": "Generally natural, but talk to a doctor if symptoms severely impact daily life.",
+            "lifestyle_tips": [
+              "Stay cool and layered",
+              "Regular weight-bearing exercise",
+              "Calcium and Vitamin D rich diet",
+              "Mindfulness or stress reduction"
+            ],
+            "matched_symptoms": []
+          },
+          "uti": {
+            "name": "UTI / Vaginal Infections",
+            "risk_score": 0.0,
+            "risk_level": "Low",
+            "explanation": "These infections are common and usually treatable with antibiotics or antifungals — early treatment avoids complications.",
+            "urgency": "See a doctor soon",
+            "urgency_desc": "See a doctor soon (within 1-2 days, especially if fever is present).",
+            "lifestyle_tips": [
+              "Drink plenty of water",
+              "Maintain hygiene",
+              "Avoid fragrant soaps"
+            ],
+            "matched_symptoms": []
+          }
+        },
+        "health_score": 100,
+        "risk_label": "Excellent",
+        "top_risk_name": "PCOS (Polycystic Ovary Syndrome)",
+        "timestamp": 1783270935276
+      }
+    ]
+  }
+}

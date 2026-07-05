@@ -1,0 +1,10 @@
+Flask
+Flask-Cors
+scikit-learn
+numpy
+pandas
+google-generativeai
+python-dotenv
+groq
+PyMuPDF
+Pillow
