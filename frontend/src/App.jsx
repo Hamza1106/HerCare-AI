@@ -23,7 +23,7 @@ export default function App() {
   const [showAuth, setShowAuth] = useState(false);
   const [authMode, setAuthMode] = useState('login');
 
-  const backendUrl = "http://localhost:5000";
+  const backendUrl = "https://hercare-ai.onrender.com";
 
   // Re-init 3D tilt whenever view changes
   useEffect(() => {
