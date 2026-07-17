@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff, Sparkles, UserPlus, LogIn, AlertCircle, CheckCircle, Lock, ArrowLeft, Heart } from 'lucide-react';
 
-const BACKEND_URL = "http://localhost:5000";
+const BACKEND_URL = "https://hercare-ai.onrender.com";
 
 // Session (who is currently logged in) still lives in localStorage — that's
 // fine, it's just "remember me" for this browser. The actual account data
