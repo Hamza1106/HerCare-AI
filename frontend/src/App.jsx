@@ -10,7 +10,7 @@ import AssessmentHistory from './components/AssessmentHistory';
 import ChatBot from './components/ChatBot';
 import HealthLibrary from './components/HealthLibrary';
 import AuthScreen, { getCurrentUser, logout } from './components/AuthScreen';
-import LandingPage from './components/LandingPage';
+import LandingPage from './components/Landingpage';
 import { t } from './i18n';
 import { init3DCards } from './utils/use3DCard';
 
