@@ -10,7 +10,7 @@ import AssessmentHistory from './components/AssessmentHistory';
 import ChatBot from './components/ChatBot';
 import HealthLibrary from './components/HealthLibrary';
 import AuthScreen, { getCurrentUser, logout } from './components/AuthScreen';
-import LandingPage from './components/Landingpage';
+import LandingPage from './components/LandingPage';
 import { t } from './i18n';
 import { init3DCards } from './utils/use3DCard';
 
@@ -19,11 +19,13 @@ export default function App() {
   const [language, setLanguage] = useState('en');
   const [geminiKey, setGeminiKey] = useState(() => localStorage.getItem('gemini_api_key') || '');
   const [user, setUser] = useState(() => getCurrentUser());
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  // Start collapsed on phones/tablets (sidebar becomes an overlay drawer there)
+  // and open on desktop, where it sits inline next to the content.
+  const [sidebarOpen, setSidebarOpen] = useState(() => typeof window === 'undefined' || window.innerWidth > 880);
   const [showAuth, setShowAuth] = useState(false);
   const [authMode, setAuthMode] = useState('login');
 
-  const backendUrl = "https://hercare-ai.onrender.com";
+  const backendUrl = "http://localhost:5000";
 
   // Re-init 3D tilt whenever view changes
   useEffect(() => {
@@ -94,7 +96,9 @@ export default function App() {
   const sidebarWidth = sidebarOpen ? '260px' : '60px';
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', position: 'relative',
+    <div
+      className={`app-container ${sidebarOpen ? 'sidebar-open-mobile' : ''}`}
+      style={{ display: 'flex', minHeight: '100vh', position: 'relative',
       backgroundImage: `
         radial-gradient(at 5% 5%, rgba(91,141,239,0.16) 0px, transparent 52%),
         radial-gradient(at 95% 10%, rgba(94,200,196,0.13) 0px, transparent 52%),
@@ -113,8 +117,13 @@ export default function App() {
         lang={language}
       />
 
-      {/* Main panel shifts with sidebar width */}
-      <main style={{
+      {/* Tap-outside-to-close overlay — only visible on phones/tablets
+          while the sidebar drawer is open (see index.css) */}
+      <div className="sidebar-backdrop" onClick={() => setSidebarOpen(false)} />
+
+      {/* Main panel shifts with sidebar width on desktop; on phones/tablets
+          it stays full-width and the sidebar floats on top instead */}
+      <main className="app-main" style={{
         flex: 1,
         marginLeft: sidebarWidth,
         padding: '2rem 2.5rem',
