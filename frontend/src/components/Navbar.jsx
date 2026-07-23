@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, User } from 'lucide-react';
+import { Heart, User, Menu } from 'lucide-react';
 import { t } from '../i18n';
 
 export default function Navbar({ title, subtitle, language, setLanguage, user, onToggleSidebar, sidebarOpen }) {
@@ -13,6 +13,14 @@ export default function Navbar({ title, subtitle, language, setLanguage, user, o
   return (
     <header className="top-navbar">
       <div className="navbar-left">
+        {/* Only visible on tablet/mobile — the sidebar's own toggle handles desktop */}
+        <button
+          className="navbar-hamburger"
+          onClick={onToggleSidebar}
+          aria-label={sidebarOpen ? 'Close menu' : 'Open menu'}
+        >
+          <Menu size={20} />
+        </button>
         <div className="page-title">
           <h1>{title}</h1>
           <p>{subtitle}</p>
