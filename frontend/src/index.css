@@ -66,6 +66,16 @@
 ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--primary-hover); }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -112,8 +122,20 @@ body {
   opacity: 0; pointer-events: none;
   transition: opacity var(--transition-fast);
 }
+/* Tablet/phone only: the sidebar becomes a full overlay drawer, so give it
+   a tap-outside-to-close backdrop and let it slide fully off/on screen
+   regardless of the desktop collapsed/expanded width the component computes. */
 @media (max-width: 880px) {
-  .app-container:not(.sidebar-collapsed) .sidebar-backdrop { opacity: 1; pointer-events: auto; }
+  .app-container.sidebar-open-mobile .sidebar-backdrop { opacity: 1; pointer-events: auto; }
+
+  .app-sidebar {
+    width: 260px !important;
+    min-width: 260px !important;
+    transform: translateX(-105%);
+  }
+  .app-sidebar.sidebar-mobile-open { transform: translateX(0); }
+
+  .app-main { margin-left: 0 !important; }
 }
 
 .logo-container { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem; }
@@ -194,7 +216,34 @@ body {
   display: flex; justify-content: space-between; align-items: center;
   margin-bottom: 2rem; gap: 1rem;
 }
-.navbar-left { display: flex; align-items: center; gap: 1rem; }
+.navbar-left { display: flex; align-items: center; gap: 1rem; min-width: 0; }
+.page-title { min-width: 0; }
+.page-title h1, .page-title p { overflow-wrap: break-word; }
+
+/* Mobile/tablet menu button — the sidebar's own collapse toggle is unreachable
+   once the drawer is fully off-screen, so this is the way back in. Hidden on
+   desktop, where the sidebar is always at least icon-visible. */
+.navbar-hamburger {
+  display: none;
+  width: 42px; height: 42px; border-radius: 12px; flex-shrink: 0;
+  border: 1px solid rgba(91, 141, 239, 0.15);
+  background: var(--glass-bg); backdrop-filter: var(--glass-blur);
+  color: var(--text-primary); cursor: pointer;
+  align-items: center; justify-content: center;
+  transition: var(--transition-fast); box-shadow: var(--shadow-sm);
+}
+.navbar-hamburger:hover { color: var(--primary); border-color: var(--primary); }
+@media (max-width: 880px) {
+  .navbar-hamburger { display: inline-flex; }
+}
+
+/* Generic responsive 2-column grid used for side-by-side detail panels
+   (e.g. urgency/lifestyle tips, dietary/activity restrictions) */
+.two-col-grid { display: grid; grid-template-columns: 1fr 1fr; }
+@media (max-width: 640px) {
+  .two-col-grid { grid-template-columns: 1fr; }
+}
+
 .sidebar-toggle {
   width: 42px; height: 42px; border-radius: 12px;
   border: 1px solid rgba(91, 141, 239, 0.15);
@@ -243,7 +292,12 @@ body {
 .dashboard-grid {
   display: grid; grid-template-columns: repeat(12, 1fr);
   gap: 1.25rem; margin-bottom: 2rem;
+  /* Grid items default to min-width:auto, so a track can be forced wider
+     than its 1fr share (and past the viewport) by a child's own min-content
+     width. This is what was pushing cards off the right edge on phones. */
+  min-width: 0;
 }
+.dashboard-grid > * { min-width: 0; }
 
 .card {
   position: relative;
@@ -257,6 +311,8 @@ body {
   transition: box-shadow 0.35s ease, border-color 0.25s ease;
   transform-style: preserve-3d;
   will-change: transform;
+  min-width: 0;
+  max-width: 100%;
   --card-rx: 0deg; --card-ry: 0deg;
   --card-gx: 50%;  --card-gy: 50%;
   transform: perspective(900px) rotateX(var(--card-rx)) rotateY(var(--card-ry));
@@ -533,18 +589,81 @@ body {
   box-shadow: 0 12px 28px var(--primary-glow) !important;
 }
 
-/* ─── Responsive ─── */
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE DESIGN — single consolidated source of truth.
+   Breakpoints: 1024px (small laptop / large tablet landscape),
+   880px (tablet portrait / where the sidebar becomes a drawer),
+   640px (phones), 480px (small phones).
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── ≤1024px: small laptop / tablet landscape ─── */
 @media (max-width: 1024px) {
-  .main-content { padding: 1.75rem 1.5rem; }
+  .app-main { padding: 1.5rem !important; }
+
+  .dashboard-grid { grid-template-columns: repeat(6, 1fr); }
+  .span-4, .span-5, .span-6 { grid-column: span 6; }
+  .span-7, .span-8, .span-9, .span-10, .span-11, .span-12 { grid-column: span 6; }
 }
+
+/* ─── ≤880px: tablet portrait & phones — sidebar becomes an overlay drawer
+       (drawer + backdrop rules live next to .sidebar-backdrop above) ─── */
 @media (max-width: 880px) {
-  .sidebar { transform: translateX(-105%); }
-  .sidebar.open { transform: translateX(0); }
-  .main-content { margin-left: 0 !important; }
-}
-@media (max-width: 640px) {
-  .dashboard-grid { grid-template-columns: 1fr; }
-  .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12 { grid-column: span 12; }
+  .app-main { padding: 1.25rem !important; }
+
+  .top-navbar { flex-wrap: wrap; align-items: flex-start; gap: 1rem; }
+  .navbar-left { width: 100%; }
+  .lang-switch { width: 100%; justify-content: center; }
+
+  /* One card per row from here down — simpler and more predictable than
+     juggling multiple partial-width tiers on narrow screens. */
+  .dashboard-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12 {
+    grid-column: 1 / -1;
+  }
+
   .symptom-logger-grid { grid-template-columns: 1fr; }
+  .checkbox-grid { grid-template-columns: 1fr; }
+
   .page-title h1 { font-size: 1.45rem; }
-} 
+  .page-title p { font-size: 0.9rem; }
+
+  .card { padding: 1.2rem; border-radius: 16px; }
+
+  .stat-widget { flex-direction: column; text-align: center; }
+  .stat-icon { margin-bottom: 0.5rem; }
+
+  .btn-container { flex-direction: column; gap: 0.75rem; }
+  .btn { width: 100%; justify-content: center; }
+
+  .chat-container { height: 70vh; }
+  .chat-bubble { max-width: 92%; }
+
+  .upload-dropzone { padding: 2rem 1rem; }
+
+  .steps-indicator { overflow-x: auto; padding-bottom: 0.5rem; }
+}
+
+/* ─── ≤640px: phones ─── */
+@media (max-width: 640px) {
+  .app-main { padding: 1rem !important; }
+}
+
+/* ─── ≤480px: small phones ─── */
+@media (max-width: 480px) {
+  .page-title h1 { font-size: 1.25rem; }
+  .card-title { font-size: 1rem; }
+
+  .risk-meter { width: 90px; height: 90px; }
+  .risk-score { font-size: 1.4rem; }
+
+  .search-input { font-size: 0.9rem; padding: 0.9rem 0.9rem 0.9rem 2.7rem; }
+
+  .logo-text { font-size: 1.1rem; }
+  .logo-icon { width: 40px; height: 40px; }
+
+  .chat-input-bar { flex-direction: column; }
+
+  /* Prevents iOS Safari from auto-zooming in on focused inputs */
+  .form-control { font-size: 16px; }
+}
