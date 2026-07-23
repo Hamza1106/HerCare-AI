@@ -78,11 +78,11 @@ export default function DashboardView({ setActiveView, backendUrl, lang = 'en', 
         borderLeft: '4px solid var(--primary)'
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-          <div>
+          <div style={{ minWidth: 0 }}>
             <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '1px' }}>
               {t('welcomeBack', lang)}
             </span>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginTop: '0.25rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginTop: '0.25rem', flexWrap: 'wrap' }}>
               {isEditingName ? (
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
                   <input
@@ -116,11 +116,11 @@ export default function DashboardView({ setActiveView, backendUrl, lang = 'en', 
             </p>
           </div>
 
-          <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-            <Award size={36} color="var(--primary)" />
-            <div style={{ fontSize: '0.8rem' }}>
+          <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', minWidth: 0 }}>
+            <Award size={36} color="var(--primary)" style={{ flexShrink: 0 }} />
+            <div style={{ fontSize: '0.8rem', minWidth: 0 }}>
               <span style={{ color: 'var(--text-muted)', display: 'block' }}>{t('platformSubmission', lang)}</span>
-              <span style={{ color: 'var(--text-primary)', fontWeight: '600' }}>{t('platformOrg', lang)}</span>
+              <span style={{ color: 'var(--text-primary)', fontWeight: '600', wordBreak: 'break-word' }}>{t('platformOrg', lang)}</span>
             </div>
           </div>
         </div>
