@@ -168,7 +168,7 @@ export default function SymptomChecker({ backendUrl, lang = 'en' }) {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)' }}>
+              <div className="two-col-grid" style={{ gap: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)' }}>
                 <div style={{ padding: '0.85rem', borderRadius: '12px', background: 'var(--bg-tertiary)', transition: 'box-shadow 0.2s' }}
                   onMouseEnter={e => e.currentTarget.style.boxShadow = '0 4px 14px rgba(91,141,239,0.10)'}
                   onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
