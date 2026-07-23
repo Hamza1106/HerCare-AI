@@ -23,8 +23,16 @@ export default function Sidebar({
   open, onToggle,
   lang = 'en',
 }) {
+  // On small screens the sidebar becomes a full overlay drawer (see index.css
+  // .app-sidebar media rules), so after picking a page it should auto-close.
+  const handleNavClick = (view) => {
+    setActiveView(view);
+    if (window.innerWidth <= 880 && open) onToggle();
+  };
+
   return (
     <aside
+      className={`app-sidebar ${open ? 'sidebar-mobile-open' : 'sidebar-mobile-closed'}`}
       style={{
         width: open ? '260px' : '60px',
         minWidth: open ? '260px' : '60px',
@@ -38,7 +46,7 @@ export default function Sidebar({
         zIndex: 100,
         display: 'flex',
         flexDirection: 'column',
-        transition: 'width 0.3s cubic-bezier(0.4,0,0.2,1), min-width 0.3s cubic-bezier(0.4,0,0.2,1)',
+        transition: 'width 0.3s cubic-bezier(0.4,0,0.2,1), min-width 0.3s cubic-bezier(0.4,0,0.2,1), transform 0.3s cubic-bezier(0.4,0,0.2,1)',
         boxShadow: '4px 0 24px rgba(91,141,239,0.08)',
         overflow: 'hidden',
       }}
@@ -104,7 +112,7 @@ export default function Sidebar({
           return (
             <button
               key={view}
-              onClick={() => setActiveView(view)}
+              onClick={() => handleNavClick(view)}
               title={!open ? label : undefined}
               style={{
                 display: 'flex',
