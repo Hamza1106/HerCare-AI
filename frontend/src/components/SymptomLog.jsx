@@ -461,7 +461,7 @@ export default function SymptomLog({ backendUrl, geminiKey, lang = 'en', userEma
                 {t('rules', lang)}
               </h4>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '1rem' }}>
+              <div className="two-col-grid" style={{ gap: '1rem', marginTop: '1rem' }}>
                 <div>
                   <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.25rem' }}>Dietary Advice:</span>
                   <ul style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', paddingLeft: '1rem' }}>
