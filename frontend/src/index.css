@@ -99,6 +99,13 @@ body {
   background-attachment: fixed;
 }
 
+/* .app-main is a flex item of .app-container (a row flex). Flex items
+   default to min-width:auto (their content's min-content size), so any
+   long unbreakable text deep inside the page could force this — and the
+   whole row — wider than the viewport. min-width:0 lets it shrink to the
+   space actually available and wrap its own content instead. */
+.app-main { min-width: 0; }
+
 /* ─── Sidebar ─── */
 .sidebar {
   width: 280px;
